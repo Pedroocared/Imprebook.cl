@@ -298,21 +298,20 @@ main section div img {
   header nav ul {
     margin-top: 80px;
     text-align: center;
-    transition: 1s;
   }
   header nav ul li {
-    display: inline;
+    display: inline-flex;
     margin: 5px;
+    transition: 0.5s;
   }
   header nav ul li a {
     font-family: "pacifico";
-    color: rgba(91, 255, 15, 0.668);
+    color: rgba(210, 2, 148, 0.668);
     font-size: 2vw;
     padding-inline: 5px;
-    width: 0vw;
   }
-  header nav ul:hover {
-    transform: scale(1.2);
+  header nav ul li:hover {
+    transform: scale(1.5);
   }
   header nav .logo {
     grid-column: 1/span 2;

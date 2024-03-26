@@ -3,7 +3,7 @@
 $size-img-logo:1vw;
 $fuente-h2-3:'pacifico';
 $size-texto-2-3: 2vw;
-$color-textonav: rgba(91, 255, 15, 0.668);
+$color-textonav: rgba(210, 2, 148, 0.668);
 $align-centertext:center;
 $size-img-gen:200px;
 $padd-textoa: 5px;
@@ -11,10 +11,11 @@ $padd-textoa: 5px;
 
 //MIXIN
 @mixin textoa {
+
     font-family: $fuente-h2-3;
     color: $color-textonav;
     font-size: $size-texto-2-3;
-    padding-inline: $padd-textoa;
+    padding-inline: $padd-textoa;  
 
 }
 
@@ -39,20 +40,18 @@ header{
             margin-top: 80px;
             text-align: $align-centertext;
             li {
-                display: inline;
+                display: inline-flex;
                 margin: 5px;
                 
                 a {                
                    @include textoa();
-                   width: 0vw;
-                   
-
+                  
+                }transition: 0.5s;
+                &:hover {
+                    transform: scale(1.5);
                 }
             }
-            transition: 1s;
-            &:hover {
-                transform: scale(1.2);
-            }
+            
         }
         .logo{
             grid-column: 1 /  span 2;

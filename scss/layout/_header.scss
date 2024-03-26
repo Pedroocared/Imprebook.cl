@@ -10,11 +10,13 @@ $padd-textoa: 5px;
 
 //MIXIN
 @mixin textoa {
-    font-family: $fuente-h2-3;
-    color: $color-textonav;
-    font-size: $size-texto-2-3;
-    padding-inline: $padd-textoa;
+    a {
+        font-family: $fuente-h2-3;
+        color: $color-textonav;
+        font-size: $size-texto-2-3;
+        padding-inline: $padd-textoa;  
 
+    }
 }
 
 @mixin imagen{
@@ -37,12 +39,17 @@ header{
         ul{
             margin-top: 80px;
             text-align: $align-centertext;
+           
             li {
-                display: inline;
+
+                display: inline-flex;
                 margin: 10px;
-                a {                
-                   @include textoa();
-                } 
+                @include textoa();
+                transition: 0.5s;
+                &:hover {
+                    transform: scale(1.5);
+                }
+ 
             }
            
         }

@@ -30,14 +30,18 @@ header nav ul {
   text-align: center;
 }
 header nav ul li {
-  display: inline;
+  display: inline-flex;
   margin: 10px;
+  transition: 0.5s;
 }
 header nav ul li a {
   font-family: "pacifico";
   color: rgba(210, 2, 148, 0.668);
   font-size: 35px;
   padding-inline: 5px;
+}
+header nav ul li:hover {
+  transform: scale(1.5);
 }
 header nav .logo {
   grid-column: 1/span 2;

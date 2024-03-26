@@ -57,7 +57,7 @@ body {
   display: flex;
   flex-direction: column; /* Cambiado a columna para alinear verticalmente */
   align-items: center; /* Centra horizontalmente todo el contenido */
-  background-image: url(/Imprebooks/img/fondo_imprebook.png);
+  background-image: url("../img/fondo_imprebook.png");
   background-size: cover;
   background-position: center;
 }

@@ -71,7 +71,11 @@ header{
 #navmobile{
     display: inline;
     margin-bottom: 100px;
-
+    .offcanvas-title{
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
     .navbar-brand{
         display: block;
         margin-left: auto;
@@ -81,6 +85,10 @@ header{
         max-width: 70%;
         font-size: 3vw;
         
+    }
+    .logo_nav{
+        margin-left: 15%;
+        width: 40vw;
     }
 }
 }    

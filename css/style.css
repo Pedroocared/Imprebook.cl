@@ -89,7 +89,7 @@ header #navdesktop nav .navegacion {
 
 @font-face {
   font-family: "Imprebooks";
-  src: url("../font/ImprebooksFont.otf");
+  src: url(../font/ImprebooksFont.otf);
   font-weight: bold;
 }
 body {

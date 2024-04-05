@@ -4,7 +4,7 @@ $align-centertext:center;
 $color-texto-fondo: #f79ce2;
 $ancho-horizon: 100%;
 $Style-font: 'oblique';
-$alto-main: 850px;
+$alto-main: 650px;
 $url-background:url('../img/fondo_imprebook.png');
 $background-posicion: cover;
 $difle-direccion: column;
@@ -23,6 +23,9 @@ $difle-direccion: column;
     background: linear-gradient(to bottom, #ffffff, #f79ce2);
     font-size: 10px;
     margin-top: 5%;
+    p{
+        margin-top: 15px;
+    }
     
 }
 @mixin m-body{
@@ -38,7 +41,7 @@ $difle-direccion: column;
 body {
     @include m-body();
     main{
-        min-height: $alto-main; /* Establece una altura mínima de 600px para el cuerpo */
+        min-height: $alto-main;
     }
     .icono-wsp{
         position: fixed;

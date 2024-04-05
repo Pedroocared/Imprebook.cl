@@ -1,4 +1,3 @@
-@charset "UTF-8";
 iframe {
   padding: 10px;
   background-color: #f79ce2;
@@ -102,7 +101,7 @@ body {
   background-position: center;
 }
 body main {
-  min-height: 850px; /* Establece una altura mínima de 600px para el cuerpo */
+  min-height: 650px;
 }
 body .icono-wsp {
   position: fixed;
@@ -120,6 +119,9 @@ body footer {
   background: linear-gradient(to bottom, #ffffff, #f79ce2);
   font-size: 10px;
   margin-top: 5%;
+}
+body footer p {
+  margin-top: 15px;
 }
 
 .gridcontent_pers {

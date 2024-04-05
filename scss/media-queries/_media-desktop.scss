@@ -1,37 +1,54 @@
+@use '../base/variables';
 @media (min-width: 768px) and (max-width: 1236px) {
-//VARIABLES
-$size-img-logo:1vw;
-$fuente-h2-3:'pacifico';
-$size-texto-2-3: 3vw;
-$color-textonav: rgba(210, 2, 148, 0.668);
-$align-centertext:center;
-$size-img-gen:15vw;
-$padd-textoa: 3px;
 
-
-//MIXIN
-@mixin textoa {
-
-    font-family: $fuente-h2-3;
-    color: $color-textonav;
-    font-size: $size-texto-2-3;
-    padding-inline: $padd-textoa;  
-
-}
-
-@mixin imagen{
-    width: $size-img-gen;
-    height: $size-img-gen;
-    transition: 1s;
-    &:hover {
-        transform: scale(1.5);
+//exclusiones
+#navmobile{
+    display: none;
     }
-}
 .FormatoTitulo{
-
     font-size: 10vw;
 }
 
+ //zona header nav,etc   
+header{
+    #navdesktop{
+        nav{
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: 1fr;
+            img {
+                @include variables.imagen();
+                }
+            ul{
+                margin-top: 5vw;
+                padding-left: 0px;
+                text-align: variables.$centrar-all;
+               
+                li {
+                    display: inline-flex;
+                    margin: 5px;
+                    a{
+                        @include variables.textolink();
+                        padding-left: 0px;
+                        }
+                    transition: 0.5s;
+                    &:hover {
+                        transform: scale(1.5);
+                        }
+                    }
+                }
+            .logo{
+                grid-column: 1 /  span 2;
+                grid-row: 1 / span 2;
+                }
+            .navegacion{
+                grid-column: 2 / span 6;
+                grid-row: 1 / span 2;
+                }
+            }
+        }
+    } 
+//zona contacto
 .gridContentContac {
     display: grid;
     grid-template-columns: 1fr;
@@ -40,10 +57,11 @@ $padd-textoa: 3px;
         padding: 25px;   
         transition: 0.5s;
         &:hover{
-         transform: scale(1.4);
-        }          
+            transform: scale(1.4);
+            }          
+        }
     }
-}
+ //zona personalizar   
 .gridcontent_pers{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -53,57 +71,9 @@ $padd-textoa: 3px;
         grid-column: auto;
         grid-row: auto;
         img{
-            width: 300px;
-            height: 300px;
-            max-width: auto;
-            margin-bottom: 25px;
-        }
-    }  
+            @include variables.img_desktop();
+            }
+        }  
 
-}    
-header{
-    #navdesktop{
-        nav{
-            display: grid;
-            grid-template-columns: repeat(8, 1fr);
-            grid-template-rows: 1fr;
-            img {
-                @include imagen();
-            }
-            ul{
-                margin-top: 5vw;
-                padding-left: 0px;
-                text-align: $align-centertext;
-               
-                li {
-                    display: inline-flex;
-                    margin: 5px;
-                    a{
-                        @include textoa();
-                        padding-left: 0px;
-                    }
-                    transition: 0.5s;
-                    &:hover {
-                        transform: scale(1.5);
-                    }
-     
-                }
-               
-            }
-            .logo{
-                grid-column: 1 /  span 2;
-                grid-row: 1 / span 2;
-            }
-            .navegacion{
-                grid-column: 2 / span 6;
-                grid-row: 1 / span 2;
-            }
-        }
-    
-
-    }
-}
-#navmobile{
-    display: none;
-}
+    }    
 }

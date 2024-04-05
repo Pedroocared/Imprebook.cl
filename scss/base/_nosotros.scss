@@ -1,27 +1,17 @@
+@use '../base/variables';
 .sectionNosotros{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    justify-content: variables.$centrar-all;
+    text-align: variables.$centrar-all;
     .fotoNosotros{
-        margin: auto;
-        max-width: 50%;
-
-        
-    }
+        margin: variables.$auto-all;
+        max-width: 50%;  
+        }
     .textoespecial{
-        display: inline;
-        margin: auto;
-        margin-top: 30px;
-        justify-content: center;
-        text-align: center;
+        @include variables.textoespecial_mobile();
         font-size: 5vh;
-        font-family: 'pacifico';
-        padding: 5px;
         max-width: 70%;
-        color: rgb(44, 8, 8);
-        
-
-    }
+        }
 
 }

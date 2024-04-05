@@ -22,11 +22,12 @@ iframe {
   margin-top: 30px;
   justify-content: center;
   text-align: center;
-  font-size: 5vh;
+  font-size: 3vh;
   font-family: "pacifico";
   padding: 5px;
+  max-width: 90%;
+  font-size: 5vh;
   max-width: 70%;
-  color: rgb(44, 8, 8);
 }
 
 .gridContentContac {
@@ -40,7 +41,11 @@ iframe {
   transition: 0.5s;
 }
 .gridContentContac .gridItem:hover {
-  transform: scale(1.4);
+  transform: scale(1.1);
+}
+
+#navmobile {
+  display: none;
 }
 
 header #navdesktop nav {
@@ -51,10 +56,10 @@ header #navdesktop nav {
 header #navdesktop nav img {
   width: 200px;
   height: 200px;
-  transition: 1s;
+  transition: 0.5s;
 }
 header #navdesktop nav img:hover {
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
 header #navdesktop nav ul {
   margin-top: 80px;
@@ -72,7 +77,7 @@ header #navdesktop nav ul li a {
   padding-inline: 5px;
 }
 header #navdesktop nav ul li:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 header #navdesktop nav .logo {
   grid-column: 1/span 2;
@@ -81,10 +86,6 @@ header #navdesktop nav .logo {
 header #navdesktop nav .navegacion {
   grid-column: 2/span 6;
   grid-row: 1/span 2;
-}
-
-#navmobile {
-  display: none;
 }
 
 @font-face {
@@ -130,6 +131,7 @@ body footer {
 }
 .gridcontent_pers .gridresponmin_item {
   grid-row: 1/span 2;
+  padding: 1vw;
   transition: 0.3s;
 }
 .gridcontent_pers .gridresponmin_item img {
@@ -170,55 +172,22 @@ main section div img {
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
-  .FormatoTitulo {
-    margin-top: 100px;
-    font-size: 10vw;
+  .tabletframe {
+    display: none;
   }
   header #navdesktop {
     display: none;
   }
-  .tabletframe {
-    display: none;
-  }
-  .gridContentContac {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .gridContentContac .gridItem {
-    margin: 25px;
-    padding: 25px;
-    transition: 0.5s;
-  }
-  .gridContentContac .gridItem:hover {
-    transform: scale(1.4);
-  }
-  .gridcontent_pers {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    grid-gap: 25px;
-  }
-  .gridcontent_pers .gridresponmin_item {
-    grid-column: 1/span 2;
-    grid-row: auto;
-  }
-  .gridcontent_pers .gridresponmin_item img {
-    width: 300px;
-    max-width: auto;
-  }
-  .gridcontent_pers .gridresponmin_item:hover {
-    transform: none;
-  }
-  #navmobile {
+  header #navmobile {
     display: inline;
     margin-bottom: 100px;
   }
-  #navmobile .offcanvas-title {
+  header #navmobile .offcanvas-title {
     justify-content: center;
     text-align: center;
     width: 100%;
   }
-  #navmobile .navbar-brand {
+  header #navmobile .navbar-brand {
     display: block;
     margin-left: auto;
     text-align: center;
@@ -227,21 +196,13 @@ main section div img {
     max-width: 70%;
     font-size: 3vw;
   }
-  #navmobile .logo_nav {
+  header #navmobile .logo_nav {
     margin-left: 15%;
     width: 40vw;
   }
-}
-@media (max-width: 575px) {
   .FormatoTitulo {
     margin-top: 100px;
     font-size: 10vw;
-  }
-  header #navdesktop {
-    display: none;
-  }
-  .tabletframe {
-    display: none;
   }
   .gridContentContac {
     display: grid;
@@ -253,7 +214,7 @@ main section div img {
     transition: 0.5s;
   }
   .gridContentContac .gridItem:hover {
-    transform: scale(1.4);
+    transform: scale(1.1);
   }
   .gridcontent_pers {
     display: grid;
@@ -264,14 +225,6 @@ main section div img {
   .gridcontent_pers .gridresponmin_item {
     grid-column: 1/span 2;
     grid-row: auto;
-  }
-  .gridcontent_pers .gridresponmin_item img {
-    width: 300px;
-    height: 300px;
-    max-width: auto;
-  }
-  .gridcontent_pers .gridresponmin_item:hover {
-    transform: none;
   }
   .sectionNosotros {
     display: flex;
@@ -294,16 +247,24 @@ main section div img {
     padding: 5px;
     max-width: 90%;
   }
-  #navmobile {
+}
+@media (max-width: 575px) {
+  .tabletframe {
+    display: none;
+  }
+  header #navdesktop {
+    display: none;
+  }
+  header #navmobile {
     display: inline;
     margin-bottom: 100px;
   }
-  #navmobile .offcanvas-title {
+  header #navmobile .offcanvas-title {
     justify-content: center;
     text-align: center;
     width: 100%;
   }
-  #navmobile .navbar-brand {
+  header #navmobile .navbar-brand {
     display: block;
     margin-left: auto;
     text-align: center;
@@ -312,10 +273,49 @@ main section div img {
     max-width: 70%;
     font-size: 3vw;
   }
-  #navmobile .logo_nav {
+  header #navmobile .logo_nav {
     margin-left: 20%;
     margin-top: 15%;
     width: 50vw;
+  }
+  .FormatoTitulo {
+    margin-top: 100px;
+    font-size: 10vw;
+  }
+  .gridContentContac {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .gridcontent_pers {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 25px;
+  }
+  .gridcontent_pers .gridresponmin_item {
+    grid-column: 1/span 2;
+    grid-row: auto;
+  }
+  .sectionNosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .sectionNosotros .fotoNosotros {
+    margin: auto;
+    max-width: 50%;
+  }
+  .sectionNosotros .textoespecial {
+    display: inline;
+    margin: auto;
+    margin-top: 30px;
+    justify-content: center;
+    text-align: center;
+    font-size: 3vh;
+    font-family: "pacifico";
+    padding: 5px;
+    max-width: 90%;
   }
 }
 .currusel .xd {
@@ -327,36 +327,11 @@ main section div img {
 }
 
 @media (min-width: 768px) and (max-width: 1236px) {
+  #navmobile {
+    display: none;
+  }
   .FormatoTitulo {
     font-size: 10vw;
-  }
-  .gridContentContac {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .gridContentContac .gridItem {
-    margin: 25px;
-    padding: 25px;
-    transition: 0.5s;
-  }
-  .gridContentContac .gridItem:hover {
-    transform: scale(1.4);
-  }
-  .gridcontent_pers {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 25px;
-  }
-  .gridcontent_pers .gridresponmin_item {
-    grid-column: auto;
-    grid-row: auto;
-  }
-  .gridcontent_pers .gridresponmin_item img {
-    width: 300px;
-    height: 300px;
-    max-width: auto;
-    margin-bottom: 25px;
   }
   header #navdesktop nav {
     display: grid;
@@ -364,12 +339,12 @@ main section div img {
     grid-template-rows: 1fr;
   }
   header #navdesktop nav img {
-    width: 15vw;
-    height: 15vw;
-    transition: 1s;
+    width: 200px;
+    height: 200px;
+    transition: 0.5s;
   }
   header #navdesktop nav img:hover {
-    transform: scale(1.5);
+    transform: scale(1.1);
   }
   header #navdesktop nav ul {
     margin-top: 5vw;
@@ -399,8 +374,33 @@ main section div img {
     grid-column: 2/span 6;
     grid-row: 1/span 2;
   }
-  #navmobile {
-    display: none;
+  .gridContentContac {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .gridContentContac .gridItem {
+    margin: 25px;
+    padding: 25px;
+    transition: 0.5s;
+  }
+  .gridContentContac .gridItem:hover {
+    transform: scale(1.4);
+  }
+  .gridcontent_pers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 25px;
+  }
+  .gridcontent_pers .gridresponmin_item {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .gridcontent_pers .gridresponmin_item img {
+    width: 200px;
+    height: 200px;
+    max-width: auto;
+    margin-bottom: 25px;
   }
 }
 

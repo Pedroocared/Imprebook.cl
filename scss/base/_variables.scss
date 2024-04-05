@@ -1,0 +1,106 @@
+//estandar variables
+$fuente-subtitulos: 'pacifico';
+$font-local: 'Imprebooks';
+$color-subtitulos: rgba(210, 2, 148, 0.668);
+$color-nav: #f79ce2;
+$tamaño-subs: 3vw;
+$centrar-all: center;
+$no-disponible: none;
+$auto-all: auto;
+$mitad_porcen: 50%;
+$padd-textoax: 3px;
+$gordo-normal:200px;
+
+
+
+//mixin desktop
+@mixin estiloshsection{
+    font-family: $fuente-subtitulos;
+    color: $color-nav;
+    font-size: 35px;
+    padding-inline:5px;
+    }
+@mixin parrafos{
+        text-align:$centrar-all;
+        font-family: $fuente-subtitulos;
+        font-size: 20px;
+    }
+@mixin hches{
+        margin-top: 0px;
+        margin-bottom: 20px;
+        text-align: $centrar-all;
+        font-family:$font-local;
+        font-size: 5vw;
+        text-shadow: -2px 20px 6px rgba(0,0,0,0.57); 
+    }
+//mixin mobile
+@mixin textoespecial_mobile{
+    display: inline;
+    margin: $auto-all;
+    margin-top: 30px;
+    justify-content: $centrar-all;
+    text-align:$centrar-all;
+    font-size: 3vh;
+    font-family:$fuente-subtitulos;
+    padding: 5px;
+    max-width: 90%;
+    }
+
+ @mixin nosotros_mobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: $centrar-all;
+    text-align: $centrar-all;
+    }
+
+@mixin navbar-brand_mobile{
+    display: block;
+    margin-left: $auto-all;
+    text-align: $centrar-all;
+    color: $color-subtitulos;
+    width: 70%;
+    max-width: 70%;
+    font-size: 3vw;
+    }
+@mixin gridItem_mobile {
+    margin: 25px;
+    padding: 25px;   
+    transition: 0.5s;
+    &:hover{
+        transform: scale(1.1);
+        }          
+    }
+@mixin gridcontent_pers_mobile{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr) ;
+    grid-gap: 25px;
+
+    }
+@mixin formatoTitulo_mobile{
+    margin-top: 100px;
+    font-size: 10vw;
+    }
+
+//desktop pequeño
+@mixin textolink {
+    font-family: $fuente-subtitulos;
+    color:$color-subtitulos;
+    font-size: $tamaño-subs;
+    padding-inline: $padd-textoax;  
+    }
+
+@mixin imagen{
+    width: $gordo-normal;
+    height: $gordo-normal;
+    transition: 0.5s;
+    &:hover {
+        transform: scale(1.1);
+        }
+    }
+@mixin img_desktop{
+    width: $gordo-normal;
+    height:$gordo-normal;
+    max-width:$auto-all;
+    margin-bottom: 25px;
+    }

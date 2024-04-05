@@ -1,94 +1,62 @@
 
+@use '../base/variables';
 @media (min-width: 576px) and (max-width: 767px) {
-//VARIABLES
-$size-img-logo:50px;
-$fuente-h2-3:'pacifico';
-$size-texto-2-3: 1rem;
-$color-textonav: rgba(210, 2, 148, 0.668);
-$align-centertext:center;
-$size-img-gen:150px;
-$padd-textoa: 3px;
-
-
-//MIXIN
-@mixin textoa {
-    display: inline-block;
-    font-family: $fuente-h2-3;
-    color: $color-textonav;
-    font-size: $size-texto-2-3;
-    padding-inline: $padd-textoa;
-}
-
-@mixin imagen{
-    display: inline;
-    width: 100%;
-    margin: 30px;
-    justify-content: center;
-    width: $size-img-gen;
-    height: $size-img-gen;
-}
-.FormatoTitulo{
-    margin-top: 100px;
-    font-size: 10vw;
-}
+//Exclusiones
+.tabletframe{
+    display: variables.$no-disponible;
+    }
+//zona header
 header{
     #navdesktop{
-        display: none;
+        display: variables.$no-disponible;
+        }
+    #navmobile{
+        display: inline;
+        margin-bottom: 100px;
+        .offcanvas-title{
+            justify-content: variables.$centrar-all;
+            text-align: variables.$centrar-all;
+            width: 100%;
+            }
+        .navbar-brand{
+            @include variables.navbar-brand_mobile();
+            }
+        .logo_nav{
+            margin-left: 15%;
+            width: 40vw;
+            }    
+        }
     }
-}
 
-.tabletframe{
-    display: none;
-}
+//main
+.FormatoTitulo{
+    @include variables.formatoTitulo_mobile();
+    }
+//zona contacto
 .gridContentContac {
     display: grid;
     grid-template-columns: 1fr;
     .gridItem {
-        margin: 25px;
-        padding: 25px;   
-        transition: 0.5s;
-        &:hover{
-         transform: scale(1.4);
-        }          
+        @include variables.gridItem_mobile();              
+        }
     }
-}
+//zona personalizar
 .gridcontent_pers{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr) ;
-    grid-gap: 25px;
+    @include variables.gridcontent_pers_mobile();
     .gridresponmin_item{
         grid-column: 1 / span 2;
         grid-row: auto;
-        img{
-            width: 300px;
-            max-width: auto;
-        }&:hover {
-            transform: none;
+        }  
+    }
+//zona nosotros
+.sectionNosotros{
+    @include variables.nosotros_mobile();
+    .fotoNosotros{
+        margin: variables.$auto-all;
+        max-width: variables.$mitad_porcen;
         }
-    }  
-}
-#navmobile{
-    display: inline;
-    margin-bottom: 100px;
-    .offcanvas-title{
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-    }
-    .navbar-brand{
-        display: block;
-        margin-left: auto;
-        text-align: center;
-        color: rgba(210, 2, 148, 0.668);
-        width: 70%;
-        max-width: 70%;
-        font-size: 3vw;
-        
-    }
-    .logo_nav{
-        margin-left: 15%;
-        width: 40vw;
-    }
-}
+    .textoespecial{
+        @include variables.textoespecial_mobile();
+        }
+    }    
 }    

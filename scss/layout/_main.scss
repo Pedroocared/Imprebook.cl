@@ -1,57 +1,21 @@
-//VARIABLES
-$fuente-h2-3:'pacifico';
-$color-texto: #f79ce2;
-$size-texto-2-3: 35px;
-$padding-texto:5px;
-$size-img-logo:200px;
-$size-parrafos:20px;
-$align-centertext:center;
-$font-local: 'Imprebooks';
-
-
-//MIXIN
-@mixin estiloshsection{
-    font-family: $fuente-h2-3;
-    color: $color-texto;
-    font-size: $size-texto-2-3;
-    padding-inline:$padding-texto;
-}
-
-@mixin parrafos{
-    text-align: $align-centertext;
-    font-family: $fuente-h2-3;
-    font-size: $size-parrafos;
-}
-@mixin h1{
-    margin-top: 0px;
-    margin-bottom: 20px;
-    text-align: $align-centertext;
-    font-family:$font-local;
-    font-size: 5vw;
-
-    text-shadow: -2px 20px 6px rgba(0,0,0,0.57); 
-}
-
-
-//MAIN ABREVIADO
+@use '../base/variables';
 main {
 
-    justify-content: $align-centertext;
-    text-align: $align-centertext;
-
+    justify-content: variables.$centrar-all;
+    text-align: variables.$centrar-all;
     h1{
-        @include h1();
+        @include variables.hches();
     }
     p{
-        @include parrafos();
+        @include variables.parrafos();
     }
     section{
         h2{
-            @include estiloshsection();
+            @include variables.estiloshsection();
         }
         div{
             img{
-                width: $size-img-logo;
+                width: variables.$gordo-normal;
             }
         }  
     }

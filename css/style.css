@@ -289,6 +289,11 @@ main section div img {
     display: inline;
     margin-bottom: 100px;
   }
+  #navmobile .offcanvas-title {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
   #navmobile .navbar-brand {
     display: block;
     margin-left: auto;
@@ -297,6 +302,11 @@ main section div img {
     width: 70%;
     max-width: 70%;
     font-size: 3vw;
+  }
+  #navmobile .logo_nav {
+    margin-left: 20%;
+    margin-top: 15%;
+    width: 50vw;
   }
 }
 .currusel .xd {

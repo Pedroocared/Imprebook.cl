@@ -105,7 +105,11 @@ header{
 #navmobile{
     display: inline;
     margin-bottom: 100px;
-
+    .offcanvas-title{
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
     .navbar-brand{
         display: block;
         margin-left: auto;
@@ -116,5 +120,11 @@ header{
         font-size: 3vw;
         
     }
+    .logo_nav{
+        margin-left: 20%;
+        margin-top: 15%;
+        width: 50vw;
+    }
 }
+
 }

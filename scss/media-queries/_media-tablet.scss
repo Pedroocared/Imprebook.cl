@@ -27,38 +27,16 @@ $padd-textoa: 3px;
     width: $size-img-gen;
     height: $size-img-gen;
 }
-
+.FormatoTitulo{
+    margin-top: 100px;
+    font-size: 10vw;
+}
 header{
-    nav{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 60px 60px;
-        img {
-            @include imagen();
-        }
-        ul{
-            padding: 50px;
-            text-align: $align-centertext;
-            li {
-                display: inline;
-                a {                
-                   @include textoa();
-                }
-            }
-        }
-        .logo{
-            display: flex;
-            justify-content: center;
-            grid-column: 1 /  span 2;
-            grid-row: 1 / span 2;
-            max-width: 100%;
-        }
-        .navegacion{
-            grid-column: 1 / span 2;
-            grid-row: 2 / span 3;
-        }
+    #navdesktop{
+        display: none;
     }
 }
+
 .tabletframe{
     display: none;
 }
@@ -89,5 +67,20 @@ header{
             transform: none;
         }
     }  
+}
+#navmobile{
+    display: inline;
+    margin-bottom: 100px;
+
+    .navbar-brand{
+        display: block;
+        margin-left: auto;
+        text-align: center;
+        color: rgba(210, 2, 148, 0.668);
+        width: 70%;
+        max-width: 70%;
+        font-size: 3vw;
+        
+    }
 }
 }    

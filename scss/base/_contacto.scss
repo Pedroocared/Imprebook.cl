@@ -1,7 +1,11 @@
 .gridContentContac {
+    margin-top: 0px;
+
     display: grid;
     grid-template-columns: repeat(3 ,1fr);
+
     .gridItem {
+
         margin: 25px;
         padding: 25px;   
         transition: 0.5s;

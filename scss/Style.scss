@@ -1,4 +1,6 @@
 
+@import"base/catalogo";
+@import"base/nosotros";
 @import "base/contacto";
 @import "layout/header";
 @import"base/reset";
@@ -6,5 +8,6 @@
 @import"layout/main";
 @import"media-queries/media-tablet";
 @import"media-queries/media-mobile";
-@import"media-queries/media-desktop";
 
+@import "layout/carousel";
+@import"media-queries/media-desktop";

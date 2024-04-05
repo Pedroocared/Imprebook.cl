@@ -50,3 +50,5 @@ npm-debug.log
 # Ignorar el archivo package.json
 package.json
 
+#ignorar dsds
+dsds.html

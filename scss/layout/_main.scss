@@ -7,7 +7,7 @@ $size-img-logo:200px;
 $size-parrafos:20px;
 $align-centertext:center;
 $font-local: 'Imprebooks';
-$size-principalfont: 50px;
+
 
 //MIXIN
 @mixin estiloshsection{
@@ -23,17 +23,22 @@ $size-principalfont: 50px;
     font-size: $size-parrafos;
 }
 @mixin h1{
+    margin-top: 0px;
+    margin-bottom: 20px;
     text-align: $align-centertext;
     font-family:$font-local;
-    font-size: $size-principalfont;
+    font-size: 5vw;
+
     text-shadow: -2px 20px 6px rgba(0,0,0,0.57); 
 }
 
 
 //MAIN ABREVIADO
 main {
+
     justify-content: $align-centertext;
     text-align: $align-centertext;
+
     h1{
         @include h1();
     }

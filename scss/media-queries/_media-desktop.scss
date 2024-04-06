@@ -16,8 +16,14 @@ header{
             display: grid;
             grid-template-columns: repeat(8, 1fr);
             grid-template-rows: 1fr;
-            img {
-                @include variables.imagen();
+            img.logo {
+                width: 150px;
+                height: 150px;
+                transition: 0.5s;
+                &:hover {
+                    transform: scale(1.1);
+                    }
+                
                 }
             ul{
                 margin-top: 5vw;
@@ -30,6 +36,7 @@ header{
                     a{
                         @include variables.textolink();
                         padding-left: 0px;
+                        font-size: 2.5vw;
                         }
                     transition: 0.5s;
                     &:hover {
@@ -62,18 +69,32 @@ header{
         }
     }
  //zona personalizar   
-.gridcontent_pers{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, 1fr) ;
-    grid-gap: 25px;
-    .gridresponmin_item{
-        grid-column: auto;
-        grid-row: auto;
-        img{
-            @include variables.img_desktop();
+ 
+main{
+    h1.FormatoTitulo{
+        @include variables.hches();
+        font-size: 4vw;
+    }
+    .gridcontent_pers{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr) ;
+        grid-gap: 25px;
+        .gridresponmin_item{
+            grid-column: auto;
+            grid-row: auto;
+            img{
+                width: 250px;
+                height: 250px;
+                border-radius: 50px;
+                max-width: auto;
+                }    
+            transition: 0.3s;
+            &:hover {
+                transform: scale(1.7);
+                }
             }
-        }  
-
-    }    
+        }
+    
+}
 }

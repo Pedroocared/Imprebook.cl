@@ -137,8 +137,8 @@ body footer p {
   transition: 0.3s;
 }
 .gridcontent_pers .gridresponmin_item img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 50px;
   max-width: auto;
 }
@@ -250,6 +250,105 @@ main section div img {
     max-width: 90%;
   }
 }
+.currusel .xd {
+  width: 300px;
+}
+
+.visually-hidden {
+  color: black;
+}
+
+@media (min-width: 768px) and (max-width: 1236px) {
+  #navmobile {
+    display: none;
+  }
+  .FormatoTitulo {
+    font-size: 10vw;
+  }
+  header #navdesktop nav {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr;
+  }
+  header #navdesktop nav img.logo {
+    width: 150px;
+    height: 150px;
+    transition: 0.5s;
+  }
+  header #navdesktop nav img.logo:hover {
+    transform: scale(1.1);
+  }
+  header #navdesktop nav ul {
+    margin-top: 5vw;
+    padding-left: 0px;
+    text-align: center;
+  }
+  header #navdesktop nav ul li {
+    display: inline-flex;
+    margin: 5px;
+    transition: 0.5s;
+  }
+  header #navdesktop nav ul li a {
+    font-family: "pacifico";
+    color: rgba(210, 2, 148, 0.668);
+    font-size: 3vw;
+    padding-inline: 3px;
+    padding-left: 0px;
+    font-size: 2.5vw;
+  }
+  header #navdesktop nav ul li:hover {
+    transform: scale(1.5);
+  }
+  header #navdesktop nav .logo {
+    grid-column: 1/span 2;
+    grid-row: 1/span 2;
+  }
+  header #navdesktop nav .navegacion {
+    grid-column: 2/span 6;
+    grid-row: 1/span 2;
+  }
+  .gridContentContac {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .gridContentContac .gridItem {
+    margin: 25px;
+    padding: 25px;
+    transition: 0.5s;
+  }
+  .gridContentContac .gridItem:hover {
+    transform: scale(1.4);
+  }
+  main h1.FormatoTitulo {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Imprebooks";
+    font-size: 5vw;
+    text-shadow: -2px 20px 6px rgba(0, 0, 0, 0.57);
+    font-size: 4vw;
+  }
+  main .gridcontent_pers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 25px;
+  }
+  main .gridcontent_pers .gridresponmin_item {
+    grid-column: auto;
+    grid-row: auto;
+    transition: 0.3s;
+  }
+  main .gridcontent_pers .gridresponmin_item img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
+    max-width: auto;
+  }
+  main .gridcontent_pers .gridresponmin_item:hover {
+    transform: scale(1.7);
+  }
+}
 @media (max-width: 575px) {
   .tabletframe {
     display: none;
@@ -318,91 +417,6 @@ main section div img {
     font-family: "pacifico";
     padding: 5px;
     max-width: 90%;
-  }
-}
-.currusel .xd {
-  width: 300px;
-}
-
-.visually-hidden {
-  color: black;
-}
-
-@media (min-width: 768px) and (max-width: 1236px) {
-  #navmobile {
-    display: none;
-  }
-  .FormatoTitulo {
-    font-size: 10vw;
-  }
-  header #navdesktop nav {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 1fr;
-  }
-  header #navdesktop nav img {
-    width: 200px;
-    height: 200px;
-    transition: 0.5s;
-  }
-  header #navdesktop nav img:hover {
-    transform: scale(1.1);
-  }
-  header #navdesktop nav ul {
-    margin-top: 5vw;
-    padding-left: 0px;
-    text-align: center;
-  }
-  header #navdesktop nav ul li {
-    display: inline-flex;
-    margin: 5px;
-    transition: 0.5s;
-  }
-  header #navdesktop nav ul li a {
-    font-family: "pacifico";
-    color: rgba(210, 2, 148, 0.668);
-    font-size: 3vw;
-    padding-inline: 3px;
-    padding-left: 0px;
-  }
-  header #navdesktop nav ul li:hover {
-    transform: scale(1.5);
-  }
-  header #navdesktop nav .logo {
-    grid-column: 1/span 2;
-    grid-row: 1/span 2;
-  }
-  header #navdesktop nav .navegacion {
-    grid-column: 2/span 6;
-    grid-row: 1/span 2;
-  }
-  .gridContentContac {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .gridContentContac .gridItem {
-    margin: 25px;
-    padding: 25px;
-    transition: 0.5s;
-  }
-  .gridContentContac .gridItem:hover {
-    transform: scale(1.4);
-  }
-  .gridcontent_pers {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 25px;
-  }
-  .gridcontent_pers .gridresponmin_item {
-    grid-column: auto;
-    grid-row: auto;
-  }
-  .gridcontent_pers .gridresponmin_item img {
-    width: 200px;
-    height: 200px;
-    max-width: auto;
-    margin-bottom: 25px;
   }
 }
 

@@ -99,8 +99,8 @@ $gordo-normal:200px;
         }
     }
 @mixin img_desktop{
-    width: $gordo-normal;
-    height:$gordo-normal;
+    width: 40vw;
+    height:40vw;
     max-width:$auto-all;
     margin-bottom: 25px;
     }

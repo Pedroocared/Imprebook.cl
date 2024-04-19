@@ -64,7 +64,11 @@ $gordo-normal:200px;
     }
 @mixin gridItem_mobile {
     margin: 25px;
-    padding: 25px;   
+    padding: 25px;  
+    transition: 0.3s;
+    &:hover {
+        transform: scale(1.4);
+        } 
        
     }
 @mixin gridcontent_pers_mobile{

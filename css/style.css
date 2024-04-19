@@ -57,6 +57,10 @@ main section .h2catalogo {
 .gridContentContac .gridItem {
   margin: 25px;
   padding: 25px;
+  transition: 0.3s;
+}
+.gridContentContac .gridItem:hover {
+  transform: scale(1.4);
 }
 
 #navmobile {
@@ -242,6 +246,10 @@ main section div img {
   .gridContentContac .gridItem {
     margin: 25px;
     padding: 25px;
+    transition: 0.3s;
+  }
+  .gridContentContac .gridItem:hover {
+    transform: scale(1.4);
   }
   .gridcontent_pers {
     display: grid;
@@ -354,7 +362,7 @@ main section div img {
   }
   .gridContentContac {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 3);
   }
   .gridContentContac .gridItem {
     margin: 25px;
@@ -363,6 +371,9 @@ main section div img {
   }
   .gridContentContac .gridItem:hover {
     transform: scale(1.4);
+  }
+  .gridContentContac img {
+    max-width: 80%;
   }
   main h1.FormatoTitulo {
     margin-top: 0px;

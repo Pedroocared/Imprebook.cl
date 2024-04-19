@@ -58,7 +58,7 @@ header{
 //zona contacto
 .gridContentContac {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 3);
     .gridItem {
         margin: 25px;
         padding: 25px;   
@@ -66,6 +66,9 @@ header{
         &:hover{
             transform: scale(1.4);
             }          
+        }
+        img{
+            max-width: 80%;
         }
     }
  //zona personalizar   

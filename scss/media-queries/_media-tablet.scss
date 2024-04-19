@@ -46,7 +46,10 @@ header{
     .gridresponmin_item{
         grid-column: 1 / span 2;
         grid-row: auto;
-        }  
+        transition: 0.3s;
+        &:hover {
+            transform: scale(1.4);
+        } } 
     }
 //zona nosotros
 .sectionNosotros{
@@ -58,5 +61,18 @@ header{
     .textoespecial{
         @include variables.textoespecial_mobile();
         }
-    }    
+    }
+main section .h2catalogo {
+    @include variables.estiloshsection();
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: white;
+    border: 3px solid #f79ce2;
+    border-radius: 25px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 220%;
+    line-height: 150%;
+}
 }    

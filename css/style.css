@@ -5,6 +5,26 @@ iframe {
   margin: 15px;
 }
 
+main section .gendasiframe {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.5fr;
+}
+
+main section .h2catalogo {
+  font-family: "pacifico";
+  color: #f79ce2;
+  font-size: 35px;
+  padding-inline: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  border: 3px solid #f79ce2;
+  border-radius: 25px;
+  width: 60%;
+  margin: 50px auto 20px auto;
+}
+
 .sectionNosotros {
   display: flex;
   flex-direction: column;
@@ -37,10 +57,6 @@ iframe {
 .gridContentContac .gridItem {
   margin: 25px;
   padding: 25px;
-  transition: 0.5s;
-}
-.gridContentContac .gridItem:hover {
-  transform: scale(1.1);
 }
 
 #navmobile {
@@ -118,32 +134,45 @@ body footer {
   font-style: "oblique";
   background: linear-gradient(to bottom, #ffffff, #f79ce2);
   font-size: 10px;
-  margin-top: 5%;
+  margin-top: 9%;
 }
 body footer p {
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .gridcontent_pers {
+  margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-gap: 25px;
-  margin-bottom: auto;
 }
 .gridcontent_pers .gridresponmin_item {
   grid-row: 1/span 2;
   padding: 1vw;
   transition: 0.3s;
 }
+.gridcontent_pers .gridresponmin_item h2 {
+  margin-bottom: 15px;
+}
 .gridcontent_pers .gridresponmin_item img {
   width: 250px;
   height: 250px;
-  border-radius: 50px;
   max-width: auto;
+  border: 5px solid #f79ce2;
+  border-radius: 50px;
 }
 .gridcontent_pers .gridresponmin_item:hover {
-  transform: scale(1.7);
+  transform: scale(1.6);
+  background-color: white;
+  position: relative;
+  left: center;
+  top: -20%;
+  border: 5px solid #f5c7ea;
+  border-radius: 50px;
+}
+.gridcontent_pers .gridresponmin_item:hover img {
+  border: 0 solid #f79ce2;
 }
 
 main {
@@ -204,7 +233,7 @@ main section div img {
   }
   .FormatoTitulo {
     margin-top: 100px;
-    font-size: 10vw;
+    font-size: 40px;
   }
   .gridContentContac {
     display: grid;
@@ -213,10 +242,6 @@ main section div img {
   .gridContentContac .gridItem {
     margin: 25px;
     padding: 25px;
-    transition: 0.5s;
-  }
-  .gridContentContac .gridItem:hover {
-    transform: scale(1.1);
   }
   .gridcontent_pers {
     display: grid;
@@ -227,6 +252,10 @@ main section div img {
   .gridcontent_pers .gridresponmin_item {
     grid-column: 1/span 2;
     grid-row: auto;
+    transition: 0.3s;
+  }
+  .gridcontent_pers .gridresponmin_item:hover {
+    transform: scale(1.4);
   }
   .sectionNosotros {
     display: flex;
@@ -248,6 +277,22 @@ main section div img {
     font-family: "pacifico";
     padding: 5px;
     max-width: 90%;
+  }
+  main section .h2catalogo {
+    font-family: "pacifico";
+    color: #f79ce2;
+    font-size: 35px;
+    padding-inline: 5px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: white;
+    border: 3px solid #f79ce2;
+    border-radius: 25px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 220%;
+    line-height: 150%;
   }
 }
 .currusel .xd {
@@ -326,7 +371,8 @@ main section div img {
     font-family: "Imprebooks";
     font-size: 5vw;
     text-shadow: -2px 20px 6px rgba(0, 0, 0, 0.57);
-    font-size: 4vw;
+    font-size: 390%;
+    margin-bottom: 3%;
   }
   main .gridcontent_pers {
     display: grid;
@@ -347,6 +393,33 @@ main section div img {
   }
   main .gridcontent_pers .gridresponmin_item:hover {
     transform: scale(1.7);
+  }
+  main section .Agendasiframe {
+    display: grid;
+    grid-template-columns: repeat(3, 3);
+    grid-template-rows: 0.4fr 1.5fr;
+  }
+  main section .Agendasiframe .h2catalogo {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    font-family: "pacifico";
+    color: #f79ce2;
+    font-size: 35px;
+    padding-inline: 5px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: white;
+    border: 3px solid #f79ce2;
+    border-radius: 25px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main section .Agendasiframe iframe {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70%;
+    max-width: 90%;
   }
 }
 @media (max-width: 575px) {
@@ -381,7 +454,7 @@ main section div img {
   }
   .FormatoTitulo {
     margin-top: 100px;
-    font-size: 10vw;
+    font-size: 40px;
   }
   .gridContentContac {
     display: grid;
@@ -396,6 +469,29 @@ main section div img {
   .gridcontent_pers .gridresponmin_item {
     grid-column: 1/span 2;
     grid-row: auto;
+    transition: 0.3s;
+  }
+  .gridcontent_pers .gridresponmin_item h2 {
+    margin-bottom: 15px;
+  }
+  .gridcontent_pers .gridresponmin_item img {
+    width: 250px;
+    height: 250px;
+    max-width: auto;
+    border: 5px solid #f79ce2;
+    border-radius: 50px;
+  }
+  .gridcontent_pers .gridresponmin_item:hover {
+    transform: scale(1.2);
+    background-color: white;
+    position: relative;
+    left: center;
+    top: -20%;
+    border: 5px solid #f5c7ea;
+    border-radius: 50px;
+  }
+  .gridcontent_pers .gridresponmin_item:hover img {
+    border: 0 solid #f79ce2;
   }
   .sectionNosotros {
     display: flex;
@@ -417,6 +513,22 @@ main section div img {
     font-family: "pacifico";
     padding: 5px;
     max-width: 90%;
+  }
+  main section .h2catalogo {
+    font-family: "pacifico";
+    color: #f79ce2;
+    font-size: 35px;
+    padding-inline: 5px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: white;
+    border: 3px solid #f79ce2;
+    border-radius: 25px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 250%;
+    line-height: 150%;
   }
 }
 

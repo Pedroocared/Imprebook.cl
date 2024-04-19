@@ -1,21 +1,38 @@
 .gridcontent_pers{
+    margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr) ;
     grid-gap: 25px;
-    margin-bottom: auto;
+    
     .gridresponmin_item{
         grid-row: 1 / span 2;
         padding: 1vw;
+
+        h2{
+            margin-bottom: 15px;
+        }
         img{
             width: 250px;
             height: 250px;
-            border-radius: 50px;
+
             max-width: auto;
+            border: 5px solid #f79ce2;
+            border-radius: 50px;
             }    
         transition: 0.3s;
         &:hover {
-            transform: scale(1.7);
+            transform: scale(1.6);
+            background-color: white;
+            position: relative;
+            left: center;
+            top: -20%;
+            border: 5px solid #f5c7ea;
+            border-radius: 50px;
+            img{
+                border: 0 solid #f79ce2;
             }
+        }
+        
         }  
     }

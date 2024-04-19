@@ -65,10 +65,7 @@ $gordo-normal:200px;
 @mixin gridItem_mobile {
     margin: 25px;
     padding: 25px;   
-    transition: 0.5s;
-    &:hover{
-        transform: scale(1.1);
-        }          
+       
     }
 @mixin gridcontent_pers_mobile{
     display: grid;
@@ -76,10 +73,11 @@ $gordo-normal:200px;
     grid-template-rows: repeat(4, 1fr) ;
     grid-gap: 25px;
 
-    }
+
+}
 @mixin formatoTitulo_mobile{
     margin-top: 100px;
-    font-size: 10vw;
+    font-size: 40px;
     }
 
 //desktop pequeño

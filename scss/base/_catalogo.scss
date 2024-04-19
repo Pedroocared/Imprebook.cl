@@ -1,6 +1,24 @@
+@use '../base/variables';
 iframe{
     padding: 10px;
     background-color: #f79ce2;
     border-radius: 8px;
     margin: 15px;
 }
+main section .gendasiframe{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.5fr;
+}
+
+
+main section .h2catalogo {
+    @include variables.estiloshsection();
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    border: 3px solid  #f79ce2;
+    border-radius: 25px;
+    width: 60%;
+    margin: 50px auto 20px auto;
+    }
